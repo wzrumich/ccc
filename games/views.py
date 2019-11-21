@@ -114,7 +114,7 @@ def question0_store(request):
                     path= os.path.join(INFO_STORE, filename+ ".json")
                     with open(path, 'w+') as f:
                         json.dump(userinfo, f)
-                response = HttpResponse()
+                response = HttpResponse(q1answer)
                 return response
 
 

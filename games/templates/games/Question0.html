@@ -127,17 +127,17 @@
                 ,
                 datatype: "json"
             });
-            if (q1answer == "A") {
-              request.done(function(msg) {
+            
+            request.done(function(msg) {
+                if (msg == "A") {
                   var url = "{% url 'question01' %}";
-                  window.location.href = url; 
-              });
-            } else {
-              request.done(function(msg) {
+                  window.location.href = url;
+                } else {
                   var url = "{% url 'question1' %}";
-                  window.location.href = url; 
-              });
-            }
+                  window.location.href = url;                  
+                }
+            });
+           
 
           }
         })
